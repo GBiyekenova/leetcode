@@ -11,10 +11,7 @@ const minimumTotal = function (triangle) {
       sum += triangle[i][0];
     } else {
       for (let y = 0; y < triangle[i].length; y++) {
-        if (triangle[i][y] < triangle[i][y + 1]) {
-          sum += triangle[i][y];
-          break;
-        } else if (triangle[i][y] === triangle[i][y + 1]) {
+        if (triangle[i][y] <= triangle[i][y + 1]) {
           sum += triangle[i][y];
           break;
         } else if (triangle[i][y] > triangle[i][y + 1]) {
